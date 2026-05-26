@@ -2,9 +2,6 @@ package com.budgetapp.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-import com.budgetapp.dao.CategoryDAO;
-import com.budgetapp.model.Category;
-import java.util.ArrayList;
 public class DatabaseManager {
     private Connection connection;
 
