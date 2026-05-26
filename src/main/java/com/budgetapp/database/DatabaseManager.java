@@ -2,6 +2,9 @@ package com.budgetapp.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import com.budgetapp.dao.CategoryDAO;
+import com.budgetapp.model.Category;
+import java.util.ArrayList;
 public class DatabaseManager {
     private Connection connection;
 
@@ -25,7 +28,7 @@ public class DatabaseManager {
                     "    category TEXT,\n" +
                     "    date TEXT,\n" +
                     "    note TEXT\n" + ")");
-            stmt.execute("CREATE TABLE IF NOT EXISTS category (\n" +
+            stmt.execute("CREATE TABLE IF NOT EXISTS categories (\n" +
                     "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
                     "    name TEXT\n" + ")");
             stmt.execute("CREATE TABLE IF NOT EXISTS budget_goal (\n" +
@@ -45,9 +48,14 @@ public class DatabaseManager {
         }
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
+
     public static void main(String[] args) {
         DatabaseManager con= new DatabaseManager();
         con.connect();
+
         con.createTables();
     }
 }
