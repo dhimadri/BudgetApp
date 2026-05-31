@@ -3,7 +3,7 @@ import com.budgetapp.dao.TransactionDAO;
 import com.budgetapp.model.Transaction;
 import java.util.*;
 public class BalanceService {
-    TransactionDAO transactions;
+    private TransactionDAO transactions;
 
     public BalanceService(TransactionDAO transactions){
         this.transactions=transactions;

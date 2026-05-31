@@ -12,7 +12,7 @@ import com.budgetapp.model.Category;
 import com.budgetapp.model.BudgetGoal;
 import com.budgetapp.model.SavingGoal;
 import com.budgetapp.service.BalanceService;
-
+import com.budgetapp.service.BudgetService;
 public class DatabaseManager {
     private Connection connection;
 
@@ -65,5 +65,6 @@ public class DatabaseManager {
         con.connect();
 
         con.createTables();
+
     }
 }

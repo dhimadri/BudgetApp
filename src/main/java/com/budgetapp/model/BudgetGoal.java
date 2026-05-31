@@ -8,7 +8,7 @@ public class BudgetGoal {
     public BudgetGoal( int id,double goal )
     {
         this.id=id;
-        this.month =LocalDate.now().getYear() + "-" +LocalDate.now().getMonthValue();
+        this.month =LocalDate.now().toString().substring(0, 7);
         this.goal=goal;
     }
 
