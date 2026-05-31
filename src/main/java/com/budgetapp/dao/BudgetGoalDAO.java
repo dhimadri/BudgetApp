@@ -1,8 +1,6 @@
 package com.budgetapp.dao;
 import java.sql.*;
 import com.budgetapp.model.BudgetGoal;
-
-
 import java.util.ArrayList;
 public class BudgetGoalDAO {
     private Connection connection;
@@ -18,7 +16,7 @@ public class BudgetGoalDAO {
             pstmt.executeUpdate();
             System.out.println("Budget Goal added!");
         } catch (Exception e) {
-            System.out.println("Failed to add category" + e.getMessage());
+            System.out.println("Failed to add Budget Goal" + e.getMessage());
         }
     }
 
