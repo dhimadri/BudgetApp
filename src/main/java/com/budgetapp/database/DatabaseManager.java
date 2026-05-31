@@ -2,6 +2,16 @@ package com.budgetapp.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.ArrayList;
+import com.budgetapp.dao.TransactionDAO;
+import com.budgetapp.dao.CategoryDAO;
+import com.budgetapp.dao.BudgetGoalDAO;
+import com.budgetapp.dao.SavingGoalDAO;
+import com.budgetapp.model.Transaction;
+import com.budgetapp.model.Category;
+import com.budgetapp.model.BudgetGoal;
+import com.budgetapp.model.SavingGoal;
+import com.budgetapp.service.BalanceService;
 
 public class DatabaseManager {
     private Connection connection;
@@ -55,6 +65,5 @@ public class DatabaseManager {
         con.connect();
 
         con.createTables();
-
     }
 }
