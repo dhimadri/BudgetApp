@@ -1,4 +1,5 @@
 package com.budgetapp.model;
+import java.time.LocalDate;
 
 public class Transaction {
     private int id;
@@ -8,15 +9,25 @@ public class Transaction {
     private String date;
     private String note;
 
-    public Transaction( int id, double amount, String type, String category, String date, String note)
+    public Transaction( int id, double amount, String type, String category, String note)
     {
         this.id=id;
         this.amount=amount;
         this.type =type;
         this.category =category;
-        this.date =date;
+        this.date = LocalDate.now().toString();
         this.note =note;
     }
+
+    public Transaction(int id, double amount, String type, String category, String date, String note) {
+        this.id = id;
+        this.amount = amount;
+        this.type = type;
+        this.category = category;
+        this.date = date;
+        this.note = note;
+    }
+
     public int getID(){
         return id;
     }
