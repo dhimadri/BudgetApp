@@ -54,5 +54,6 @@ public class DatabaseManager {
         con.connect();
 
         con.createTables();
+
     }
 }
