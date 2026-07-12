@@ -11,6 +11,7 @@ import com.budgetapp.model.BudgetGoal;
 import com.budgetapp.model.SavingGoal;
 import com.budgetapp.service.BalanceService;
 import com.budgetapp.service.BudgetService;
+import com.budgetapp.service.GoalService;
 public class DatabaseManager {
     private Connection connection;
 
@@ -59,11 +60,9 @@ public class DatabaseManager {
     }
 
     public static void main(String[] args) {
-        DatabaseManager con= new DatabaseManager();
+        DatabaseManager con = new DatabaseManager();
         con.connect();
 
         con.createTables();
-        }
-
     }
 }
