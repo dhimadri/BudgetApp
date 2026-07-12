@@ -10,10 +10,10 @@ public class SavingGoalDAO {
 
     public void addSavingGoal(SavingGoal savingGoal) {
         try {
-            PreparedStatement pstmt = connection.prepareStatement("INSERT INTO saving_goal (name, goal, currS) VALUES (?, ?, ?)");
+            PreparedStatement pstmt = connection.prepareStatement("INSERT INTO saving_goal (name, goal, priority) VALUES (?, ?, ?)");
             pstmt.setString(1, savingGoal.getName());
             pstmt.setDouble(2, savingGoal.getGoal());
-            pstmt.setDouble(3, savingGoal.getCurrentSavings());
+            pstmt.setInt(3, savingGoal.getPriority());
             pstmt.executeUpdate();
             System.out.println("saving Goal added!");
         } catch (Exception e) {
@@ -27,7 +27,7 @@ public class SavingGoalDAO {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM saving_goal");
             while (rs.next()) {
-                SavingGoal savingGoal = new SavingGoal(rs.getInt("id"),  rs.getString("name"), rs.getDouble("goal"), rs.getDouble("currS"));
+                SavingGoal savingGoal = new SavingGoal(rs.getInt("id"),  rs.getString("name"), rs.getDouble("goal"), rs.getInt("priority"));
                 savingGoals.add(savingGoal);
             }
         }

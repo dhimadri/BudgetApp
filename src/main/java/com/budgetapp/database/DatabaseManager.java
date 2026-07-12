@@ -1,7 +1,5 @@
 package com.budgetapp.database;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import com.budgetapp.dao.TransactionDAO;
 import com.budgetapp.dao.CategoryDAO;
@@ -45,9 +43,9 @@ public class DatabaseManager {
                     "    month TEXT\n" + ")");
             stmt.execute("CREATE TABLE IF NOT EXISTS saving_goal (\n" +
                     "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                    "    name TEXT,\n" +
                     "    goal REAL,\n" +
-                    "    currS REAL,\n" +
-                    "    name TEXT\n" + ")");
+                    "    priority INTEGER\n" + ")");
             System.out.println("Tables created!");
 
         }
@@ -65,6 +63,7 @@ public class DatabaseManager {
         con.connect();
 
         con.createTables();
+        }
 
     }
 }
