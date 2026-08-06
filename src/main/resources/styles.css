@@ -27,3 +27,21 @@
     -fx-background-color: #00ff9d;
     -fx-text-fill: black;
 }
+.overview-label {
+    -fx-text-fill: #00ff9d;
+    -fx-font-size: 14px;
+}
+
+.balance-label {
+    -fx-text-fill: #00ff9d;
+    -fx-font-size: 24px;
+    -fx-padding: 0 0 20 0;
+}
+
+.warning-label {
+    -fx-text-fill: red;
+    -fx-background-color: #1a0000;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-max-width: infinity;
+}
