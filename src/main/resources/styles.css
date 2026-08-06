@@ -1,0 +1,29 @@
+
+.button {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-border-color: #00ff9d;
+    -fx-border-width: 6px;
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 14px;
+    -fx-min-width: 350px;
+    -fx-min-height: 55px;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.label {
+    -fx-text-fill: #00ff9d;
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 28px;
+    -fx-padding: 0 0 40 0;
+}
+
+.root {
+    -fx-background-color: #000000;
+}
+.button:hover {
+    -fx-background-color: #00ff9d;
+    -fx-text-fill: black;
+}
